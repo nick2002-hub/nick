@@ -1,0 +1,4 @@
+body { text-align: center; font-family: sans-serif; margin-top: 80px; }
+button { padding: 12px 24px; border-radius: 999px; border: 0; cursor: pointer; }
+#yes { background: #e8566f; color: white; transition: transform .15s; }
+#no  { background: white; border: 2px solid #e8566f; transition: left .18s, top .18s; }
