@@ -18,3 +18,15 @@ h1 { color: #e8566f; animation: wiggle 2s ease-in-out infinite; }
                   50% { box-shadow: 0 0 0 14px rgba(232,86,111,0); } }
 @keyframes floatUp { to { transform: translateY(-110vh) rotate(30deg); opacity: 0; } }
 @keyframes pop { 0% { transform: scale(0); } 70% { transform: scale(1.2); } 100% { transform: scale(1); } }
+#bear.shake { animation: shake .4s; }
+#bear.kilig { animation: kilig .5s ease-in-out infinite; filter: drop-shadow(0 0 12px #ff8fab); }
+
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-10px) rotate(-6deg); }
+  75% { transform: translateX(10px) rotate(6deg); }
+}
+@keyframes kilig {
+  0%,100% { transform: scale(1) rotate(-6deg); }
+  50% { transform: scale(1.2) rotate(6deg); }
+}
