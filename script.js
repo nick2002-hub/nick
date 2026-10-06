@@ -1,4 +1,5 @@
-const yes = document.getElementById("yes");
+const title = document.getElementById("title");
+const BASE = "Will you be my Valentine";
 const no = document.getElementById("no");
 const bear = document.getElementById("bear");
 const msg = document.getElementById("msg");
@@ -36,6 +37,7 @@ function dodge(e) {
   setTimeout(() => bear.classList.remove("shake"), 400);
 
   dodges++;
+  updateTitle();
   yes.style.transform = "scale(" + Math.min(1 + dodges * 0.08, 1.8) + ")";
 }
 
@@ -58,6 +60,7 @@ yes.addEventListener("pointerleave", () => {
 });
 
 yes.onclick = () => {
+    title.textContent = "I LOVE YOU!! 💖";
   done = true;
   no.hidden = true;
   bear.classList.add("kilig");

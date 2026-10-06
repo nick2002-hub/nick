@@ -3,7 +3,8 @@ button { padding: 12px 24px; border-radius: 999px; border: 0; cursor: pointer; }
 #yes { background: #e8566f; color: white; transition: transform .15s; }
 #no  { background: white; border: 2px solid #e8566f; transition: left .18s, top .18s; }
 body { background: #fff5f7; overflow-x: hidden; }
-h1 { color: #e8566f; animation: wiggle 2s ease-in-out infinite; }
+h1 { color: #e8566f; font-size: 2rem; overflow-wrap: anywhere;
+     transition: font-size .3s ease; animation: wiggle 2s ease-in-out infinite; }
 #bear { font-size: 90px; animation: bounce 1.2s ease-in-out infinite; }
 #yes { animation: glow 1.5s infinite; }
 #msg { font-size: 1.4rem; }
