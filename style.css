@@ -1,33 +1,33 @@
-body { text-align: center; font-family: sans-serif; margin-top: 80px; }
-button { padding: 12px 24px; border-radius: 999px; border: 0; cursor: pointer; }
-#yes { background: #e8566f; color: white; transition: transform .15s; }
-#no  { background: white; border: 2px solid #e8566f; transition: left .18s, top .18s; }
-body { background: #fff5f7; overflow-x: hidden; }
-h1 { color: #e8566f; font-size: 2rem; overflow-wrap: anywhere;
-     transition: font-size .3s ease; animation: wiggle 2s ease-in-out infinite; }
-#bear { font-size: 90px; animation: bounce 1.2s ease-in-out infinite; }
-#yes { animation: glow 1.5s infinite; }
-#msg { font-size: 1.4rem; }
-#msg.pop { animation: pop .5s ease; }
+body {
+  margin: 0; padding: 20px; box-sizing: border-box;
+  min-height: 100vh; min-height: 100dvh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 12px;
+  text-align: center; font-family: sans-serif;
+  background: #fff5f7; overflow-x: hidden;
+}
+h1 {
+  margin: 0; max-width: 100%; color: #e8566f; font-size: 2rem;
+  overflow-wrap: anywhere; transition: font-size .3s ease;
+  animation: wiggle 2s ease-in-out infinite;
+}
+#bear { font-size: 90px; line-height: 1; animation: bounce 1.2s ease-in-out infinite; }
+#say { margin: 0; min-height: 1.8em; font-size: 1.3rem; font-weight: 600; color: #e8566f; }
+.row { display: flex; gap: 16px; align-items: center; justify-content: center; min-height: 4rem; }
+button { font-size: 1rem; padding: .75em 1.5em; border-radius: 999px; border: 0; cursor: pointer; }
+#yes { background: #e8566f; color: white; transition: font-size .2s; animation: glow 1.5s infinite; }
+#no { background: white; color: #e8566f; border: 2px solid #e8566f; transition: left .18s, top .18s; }
+#msg { margin: 0; font-size: 1.4rem; }
 
-.heart { position: fixed; bottom: -40px; pointer-events: none;
-         animation: floatUp linear forwards; }
+.pop { animation: pop .4s ease; }
+#bear.shake { animation: shake .4s; }
+#bear.kilig { animation: kilig .5s ease-in-out infinite; filter: drop-shadow(0 0 12px #ff8fab); }
+.heart { position: fixed; bottom: -40px; pointer-events: none; animation: floatUp linear forwards; }
 
 @keyframes wiggle { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
 @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
-@keyframes glow { 0%,100% { box-shadow: 0 0 0 0 rgba(232,86,111,.5); }
-                  50% { box-shadow: 0 0 0 14px rgba(232,86,111,0); } }
+@keyframes glow { 0%,100% { box-shadow: 0 0 0 0 rgba(232,86,111,.5); } 50% { box-shadow: 0 0 0 14px rgba(232,86,111,0); } }
 @keyframes floatUp { to { transform: translateY(-110vh) rotate(30deg); opacity: 0; } }
-@keyframes pop { 0% { transform: scale(0); } 70% { transform: scale(1.2); } 100% { transform: scale(1); } }
-#bear.shake { animation: shake .4s; }
-#bear.kilig { animation: kilig .5s ease-in-out infinite; filter: drop-shadow(0 0 12px #ff8fab); }
-
-@keyframes shake {
-  0%,100% { transform: translateX(0); }
-  25% { transform: translateX(-10px) rotate(-6deg); }
-  75% { transform: translateX(10px) rotate(6deg); }
-}
-@keyframes kilig {
-  0%,100% { transform: scale(1) rotate(-6deg); }
-  50% { transform: scale(1.2) rotate(6deg); }
-}
+@keyframes pop { 0% { transform: scale(.6); } 70% { transform: scale(1.15); } 100% { transform: scale(1); } }
+@keyframes shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-10px) rotate(-6deg); } 75% { transform: translateX(10px) rotate(6deg); } }
+@keyframes kilig { 0%,100% { transform: scale(1) rotate(-6deg); } 50% { transform: scale(1.2) rotate(6deg); } }
