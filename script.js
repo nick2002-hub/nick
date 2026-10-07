@@ -101,7 +101,7 @@ yes.onclick = () => {
   done = true;
   no.hidden = true;
   bear.classList.add("kilig");
-  react({ face: "🥰", text: "Sabi ko na eh! 😘" });
+  react({ face: "🥰", text: "Sorry po sa lahat" });
   msg.textContent = "Yay!! 🥰";
   title.textContent = "I LOVE YOU!! 💖";
   title.style.fontSize = "3rem";
