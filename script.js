@@ -4,7 +4,7 @@ const bear = document.getElementById("bear");
 const say = document.getElementById("say");
 const msg = document.getElementById("msg");
 const title = document.getElementById("title");
-const BASE = "Will you be my Valentine";
+const BASE = "I miss you 🥹";
 
 let dodges = 0;
 let done = false;
